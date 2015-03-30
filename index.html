@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <link href="styles/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <title>Test</title>
+ </head>
+ <body>
+   <div class="container" ng-app="myApp" ng-controller="home">
+     <form method="POST" class="form-signin">
+       <label for="Firstname">Pr&eacute;nom :</label>
+       <input id="Firstname" name="Firstname" ng-model="firstname" type="text" /> 
+       <label for="Lastname">Nom de Famille: </label> 
+       <input id="Lastname" name="Lastname" ng-model="lastname" type="text" /> 
+       <label for="Username">Identifiant: </label> 
+       <input id="Username" name="Username" ng-model="username" type="text" /> 
+       <label for="Password">Mot de Passe:</label> 
+       <input id="Password" name="Password" ng-model="password" type="password" />
+       <input type="button" id="Register" value="Enregistrer" ng-click = "submitAction()" />
+     </form>
+  </div>
+  </body>
+  <script src="js/core/database.js" type="text/javascript"></script>
+  <script src="js/core/transaction.js" type="text/javascript"></script>
+   <script src="js/core/viewFactory.js" type="text/javascript"></script>
+  <script src="js/core/command/command.js" type="text/javascript"></script>
+  <script src="js/core/command/handler/accountCommandHandler.js" type="text/javascript"></script>
+  <script src="js/core/model/user.js" type="text/javascript"></script> 
+  <script src="js/application/application.js" type="text/javascript"></script>
+  <script src="js/application/controller/homeController.js" type="text/javascript"></script>
+  <script src="js/application/view/account.js" type="text/javascript"></script>
+</html>
