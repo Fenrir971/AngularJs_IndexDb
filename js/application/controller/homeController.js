@@ -1,12 +1,17 @@
-window.application.controller("home",function($scope){
-  
-  $scope.submitAction = function(){
-  		var c = new command('account');
-    	c.execute(scopeFilter);
+application.controller('home',function($scope){
+ 
+$scope.capitals = [{'Name':'Paris','Country': 'France'},{'Name':'Berlin','Country': 'Germany'},{'Name':'Madrid','Country': 'Spain'}];
+
+ $scope.submitAction = function(){
+	  var user = new userForm(this);
+	  console.log(user);
+	  var c = new command('account');
+	  c.execute(user);
   }
   
   $scope.listView = function () {
- 	return viewFactory.load('users');
+	var list = viewFactory.load('users');
+ 	return list;
   }
 
   $scope.deleteAction = function(){
@@ -17,15 +22,5 @@ window.application.controller("home",function($scope){
    $scope.updateAction = function(){
   		var c = new command('account');
   		c.execute($scope);
-	}
-   
-   var scopeFilter = {
-     'id' : $scope.id,
-     'firstname' : $scope.firstname,
-  	  'lastname' : $scope.lastname,
-     'username' : $scope.username,
-     'password' : $scope.password
-   }
-  
+	}  
 });
-
