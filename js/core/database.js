@@ -14,11 +14,11 @@ database.prototype.Name = function(){
 database.Database = undefined;
 
 database.prototype.Transaction = function(){
-
-if(database.Database == undefined)
-	this.Open(this.Name);
-
   return new transaction('Users',database.Database);
+}
+
+database.IsOpen = function(){
+	return database.Database != undefined;
 }
 
 database.prototype.Open = function(name){

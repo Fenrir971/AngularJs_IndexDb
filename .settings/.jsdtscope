@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="lib" path="js/application/application.js"/>
+	<classpathentry kind="lib" path="js/core/command/handler/accountCommandHandler.js"/>
+	<classpathentry kind="lib" path="js/core/command/command.js"/>
+	<classpathentry kind="lib" path="js/core/model/user.js"/>
+	<classpathentry kind="lib" path="js/core/database.js"/>
+	<classpathentry kind="lib" path="js/core/transaction.js"/>
+	<classpathentry kind="lib" path="js/core/viewFactory.js"/>
+	<classpathentry kind="lib" path="js/librairies/angular.js"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
